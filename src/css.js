@@ -1,12 +1,17 @@
 const string = `
 .skin *{box-sizing: border-box;margin: 0;padding: 0;}
 .skin *::before, .skin *::after{box-sizing: border-box;}
-
+/*
+ * 首先，需要准备皮卡丘的皮
+ */
 .skin{
     background: #ffe600;
     min-height: 50vh;
     position: relative;
 }
+/*
+* 接下来，画皮卡丘的鼻子
+*/
 .nose{
     border:10px solid black;
     border-color: black transparent transparent;
@@ -37,6 +42,9 @@ const string = `
     transform-origin: 50% 100%;
 animation: wave 300ms infinite linear;
 }
+/*
+* 接下来，画皮卡丘的红圈
+*/
 .yuan{
     position: absolute;
     width: 20px;
@@ -46,6 +54,9 @@ animation: wave 300ms infinite linear;
     background:black;
     border-radius: 10px 10px 0px 0px;
 }
+/*
+* 接下来，画皮卡丘的眼睛
+*/
 .eye{
     border: 2px solid black;
     width: 64px;
@@ -57,6 +68,9 @@ animation: wave 300ms infinite linear;
     background:#2e2e2e;
     border-radius: 50%;
 }
+/*
+* 眼睛里面的珠子
+*/
 .eye::before{
     content: '';
     display: block;
@@ -69,9 +83,15 @@ animation: wave 300ms infinite linear;
     left: 4px;
     top: 2px;
 }
+/*
+* 左眼在左边（废话）
+*/
 .eye.left{
     transform:translateX(-100px);
 }
+/*
+* 右眼在右边（废话）
+*/
 .eye.right{
     transform: translateX(100px);
 }
@@ -152,6 +172,9 @@ overflow: hidden;
     margin-left: -100px;
     border-radius: 100px;
 }
+/*
+* 然后，画皮卡丘的脸
+*/
 .face{
     position: absolute;
     left: 50%;
@@ -162,6 +185,9 @@ overflow: hidden;
     margin-left: -44px;
     z-index: 2;
 }
+/*
+* 将脸放到正确的位置
+*/
 .face.left{
     transform: translateX(-180px);
     background: #ff0000;
@@ -171,5 +197,8 @@ overflow: hidden;
     transform: translateX(180px);
     background: #ff0000;
     border-radius: 50%;
-}`
+}
+/*
+* 好了，这只皮卡丘送给你
+*/`;
 export default string;
